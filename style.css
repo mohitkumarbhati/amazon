@@ -8,7 +8,17 @@ body{
     background-color: black;
     color:white;
     font-family: "poppins",sans-serif;
+    height: 80vh;
+    width: 100%;
+    
 }
+
+@media screen and (max-width: 500px){
+    body{
+        background-color: red;
+    }
+}
+
 .navbar{
     position:absolute;
     top:0;
@@ -35,6 +45,7 @@ body{
     background:transparent;
     border:none;
     color:white;
+    cursor: pointer;
 }
 
 .dropdown_container{
@@ -51,67 +62,83 @@ body{
     border-radius: 4px;
     height:35px;
     width:100px;
+    cursor: pointer;
 }
 .backgroung_image{
     width:100%;
     height:100%;
+    opacity: 0.44;
 }
 .bg_img{
     width:100%;
     height:100%;
-    object-fit: cover;
+    object-fit:fixed;
 }
 .hero_bgoverlay{
-    position:absolute;
+    position:fixed;
     inset:0;
     width:100%;
     height: 100%;;
-    background: rgba(0,0,0,0.4 );
+    background: rgba(8, 8, 8, 0.4) ;
 }
 .hero_written{
     position: absolute;
-    top:30%;
-    left:22%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin-top: 60px;
     text-align:center;
     display:flex;
     flex-direction: column;
-    gap:10px;
+    gap:4px;
 
 }
 .hero_title{
     font-weight: 600;
-    font-size: 3rem;
+    line-height: 70px;
+    max-width: 650px;
+    font-size: 60px;
 
 }
 .hero_subtitle,.hero_description{
     font-weight:400;
+    margin-bottom: 20px;
     font-size:1.3rem;
 }
 .email{
-    width :450px;
+     width :450px;
      height:60px;
-     color:black;
-     padding:0.25 0.5rem;
-     border-radius: 3px;
-     border-color: white;
+     color:white;
+     background-color: rgba(23, 23, 23, 0.8);
+     font-weight: 900;
+     padding:5px 91px 5px 10px;
+     font-size: 12px;
+     border-radius: 4px;
+     border: 1px solid rgba(246, 238, 238, 0.9);
 
 }
 .get_started{
-    font-size: large;
-    width:170px;
-    height:60px;
-     background-color: #dc030f;
-     border:1px solid #dc030f;
+     font-size: 20px;
+     width:180px;
+     height:59px;
+     font-weight: 600;
+     background-color: red;
+     border-radius: 6px;
+     border: 1px solid red;
      color:white;
+     padding: 5px 10px;
+     cursor: pointer;
+     margin-left: 10px;
 }
 .card1, .card2, .card3{
     border-top:8px rgb(69,69,69);
-    font-size: medium;
     padding: 50px;
     padding-right: 50px;
+    opacity: 0.9;
     
 }
 .card1{
+    font-size: medium;
     position: relative;
     display:inline-grid;
     grid-template-columns:50% 40%;
@@ -121,29 +148,42 @@ body{
 }
 .desc1{
     padding-left:80px;
+    justify-content: center;
+    align-items: center;
 }
 .card1 video{
     position: relative;
-    width:100%;
+    width:34vw;
     height:58%;
+    left: 18%;
+    bottom: 2%;
     grid-column: 2/2;
     grid-row: 1/2;
     z-index: -1;
+    
 }
 .card1 img{
+    position: relative;
     grid-column: 2/2;
     grid-row: 1/2;
 }
 .cards h1{
-    font-size: 3rem;
+    position: relative;
+    font-size: 48px;
+    font-weight: bolder;
     padding: 1rem;
     padding-left:0;
 }
 .cards h3{
-font-size: 1.6rem;
-line-height: 2rem;
+    position: relative;
+    font-family: "poppins",sans-serif;
+    font-style:normal;
+    font-size: 24px;
+    line-height: 2rem;
+    font-weight: 100;
 }
 .card2{
+    font-size: medium;
     position: relative;
     display:inline-grid;
     grid-template-columns:40% 50%;
@@ -152,9 +192,12 @@ line-height: 2rem;
     padding:25px 45px 50px; 
 }
 .desc2{
-    padding-left: 180px;
+    padding-left:80px;
+    justify-content: center;
+    align-items: center;
 }
 .card3{
+    font-size: medium;
     position: relative;
     display:inline-grid;
     grid-template-columns:50% 40%;
@@ -164,13 +207,17 @@ line-height: 2rem;
 }
 .desc3{
     padding-left:80px;
+    justify-content: center;
+    align-items: center;
 }
 .card3 video{
     position: relative;
     width:100%;
     height:700px;
+    bottom: 13%;
+    left:1%;
     background-color:cover;
-    padding:0px 0.02px 15px 120px;
+    padding:0px 0.02px 15px 100px;
     grid-column: 2/2;
     grid-row: 1/2;
     z-index: -1;
@@ -204,3 +251,4 @@ line-height: 2rem;
 .footer li{
     line-height:1.9;
 }
+
